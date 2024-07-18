@@ -6,6 +6,11 @@ from taxi.forms import (
     CarSearchForm,
     ManufacturerSearchForm,
 )
+from taxi.models import (
+    Car,
+    Driver,
+    Manufacturer
+)
 
 
 class DriverCreationFormTests(TestCase):
