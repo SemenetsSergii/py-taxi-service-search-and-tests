@@ -69,16 +69,6 @@ class PrivateDriverListViewTest(TestCase):
         Driver.objects.create(username="Kimmi", license_number="KRA12345")
 
     def test_retrieve_drivers(self):
-        Driver.objects.create(
-            username="Michael",
-            password="MS123456",
-            license_number="MSA12345"
-        )
-        Driver.objects.create(
-            username="Kimmi",
-            password="KR123456",
-            license_number="KRA12345"
-        )
         response = self.client.get(DRIVER_LIST_URL)
         self.assertEqual(response.status_code, 200)
         drivers = Driver.objects.all()
